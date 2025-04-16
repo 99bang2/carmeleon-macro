@@ -1,0 +1,38 @@
+{
+	"name": "carmeleon-macro-server",
+	"version": "0.1.0",
+	"description": "Carmeleon Macro Server",
+	"author": "Rocketlaunch",
+	"private": true,
+	"scripts": {
+		"start": "pm2 start",
+		"dev": "cross-env NODE_ENV=development node index.js",
+		"stop": "pm2 stop MACRO-SERVER --watch  && pm2 delete MACRO-SERVER ",
+		"restart": "pm2 stop MACRO-SERVER && pm2 delete MACRO-SERVER && pm2 start"
+	},
+	"dependencies": {
+		"bcrypt-nodejs": "0.0.3",
+		"bluebird": "^3.5.5",
+		"consola": "^2.11.3",
+		"docdash": "^1.2.0",
+		"jsonwebtoken": "^8.5.1",
+		"koa": "^2.11.0",
+		"koa-body": "^4.1.1",
+		"koa-router": "^7.4.0",
+		"koa-socket-2": "^1.2.0",
+		"koa2-cors": "^2.0.6",
+		"moment": "^2.24.0",
+		"mysql2": "^2.1.0",
+		"node-schedule": "^1.3.2",
+		"numeral": "^2.0.6",
+		"puppeteer": "^12.0.1",
+		"redis": "^3.0.2",
+		"sequelize": "^5.21.3",
+		"sequelize-cli": "^5.5.1"
+	},
+	"devDependencies": {
+		"cross-env": "^7.0.3",
+		"jsdoc": "^3.6.4",
+		"prettier": "2.6.2"
+	}
+}
